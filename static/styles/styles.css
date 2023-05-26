@@ -25,5 +25,5 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body{ 
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(2, 0, 166, 1));
 }

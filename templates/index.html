@@ -7,9 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Alexandre</title>
-    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}">
 </head>
 <body>
-    
+    <div class='container__logo'>
+        <img src="{% static 'assets/logo/logo_nome.png' %}" alt="">
+    </div>
+    <div class="container__imagem">
+        <img src="{% static 'assets/favicon/sentado_mesa.png' %}" alt="">
+    </div>
+    <div class="container__frase_apresentacao">
+        <h1 style='color:white;'>Olá galera,<br>me chamo Vinicius e<br>eu sou um <span style="color: #044aad;">programador</span><span style="color: #044aad;"><br>Seja</span> bem vindo ao meu portifólio</h1>
+        <div class="container__botoes">
+            <button>Saber mais sobre mim</button>
+            <button>Ver meus projetos e ideias</button>
+        </div>
+    </div>
 </body>
+
+
 </html>
+
