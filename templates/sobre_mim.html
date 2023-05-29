@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="content-wrapper">
+    <div class="centered-image">
+        <img src="{% static 'assets/foto/foto_perfil.png' %}" alt="">
+    </div>
+    <div class="apresentacao">
+        <h2 class="titulo">Sobre mim</h2>
+        <div class="conteudo">
+        <p>Me chamo Vinicius Alexande,<br> tenho 21 anos e sou estudante de <br>Análise de desenvolvimento de<br> sistema e Ciência de dados. Busco <br>oportunidade para ganhar<br> experiência no mercado de<br> trabalho, adquirir novos<br> conhecimentos e pôr em prática<br> tudo que aprendi até o momento.<br> Acredito que com dedicação e foco<br> é possível alcançar todos objetivos,<br> acadêmicos, profissionais e <br>pessoais.</p>
+        </div>
+    </div>
+    <div class="competencias">
+        <h3 class="titulo">Algumas competencias</h3>
+        <ul>
+            <li>Django</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Html e CSS</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+
+

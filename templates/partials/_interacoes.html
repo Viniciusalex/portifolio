@@ -1,0 +1,18 @@
+{% load static %}
+
+
+<section class="menu-lateral">
+    <nav class="menu-lateral__navegacao">
+        {% if pagina_atual == 'index' %}
+            <a href="{% url 'index' %}" ><img src="{% static 'assets/icones/home-ativo.png' %}"> Home</a>
+        {% else %}
+            <a href="{% url 'index' %}" ><img src="{% static 'assets/icones/home.png' %}"> Home</a>
+        {% endif %}
+        <a href="#"><img src="{% static 'assets/icones/contato.png'  %}">Entrar em contato</a>
+        {% if pagina_atual == 'sobreMim' %}
+        <a href="{% url 'sobreMim' %}"><img src="{% static 'assets/icones/sobre-ativo.png'  %}">Saber mais sobre mim</a>
+        {% else %}
+        <a href="{% url 'sobreMim' %}"><img src="{% static 'assets/icones/sobre.png'  %}">Saber mais sobre mim</a>
+        {% endif %}
+    </nav>
+</section>

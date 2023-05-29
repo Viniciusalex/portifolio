@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    {% block interacoes %}
+    <!-- Conteúdo específico para o outro template -->
+    {% endblock %}  
+    <div class="container__imagem">
+        <img src="{% static 'assets/favicon/sentado_mesa.png' %}" alt="">
+    </div>
+    <div class="container__frase_apresentacao">
+        <h1 style='color:white;'>Olá!<br>me chamo Vinicius e<br>eu sou um <span style="color: #044aad;">programador</span><span style="color: #044aad;"><br>Seja</span> bem vindo ao meu portifólio</h1>
+        <div class="container__botoes">
+            <a href="{% url 'sobreMim' %}"><button>Saber mais sobre mim</button></a>
+            <a href="{% url 'index' %}"><button>Ver meus projetos e ideias</button></a>
+        </div>
+    </div>
+    {% block footer %}
+    <!-- Conteúdo específico para o outro template -->
+    {% endblock %}  
+{% endblock %}

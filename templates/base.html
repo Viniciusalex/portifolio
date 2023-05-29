@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Alexandre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}">
+</head>
+<body>
+    {% include "partials/_logo_site.html" %}
+    
+    {% block interacoes %}
+        {% include "partials/_interacoes.html" %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+        {% include "partials/_footer.html" %}
+    {% endblock %}
+
+    
+</body>
+</html>
+

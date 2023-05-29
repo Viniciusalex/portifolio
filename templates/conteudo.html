@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section class="conteudo" >
+    <section class="imagem">
+        <div class="imagem__conteudo">
+            <img class="imagem__imagem" src="{% static '/assets/conteudo/exemplo.jpg' %}">
+            <div class="imagem__info">
+                <div class="imagem__texto">
+                    <p class="imagem__titulo" style="color:#044aad">Teste TDD</p>
+                    <p class="imagem__descricao" style="color:#044aad">Linguagem Usada:</p>
+                    <p class="imagem__texto" style="color:#044aad">Sobre o Projeto:</p>
+                    <p class="imagem__texto" style="color:#044aad">Repositorio:</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+</main>
+</div>
+{% endblock %}

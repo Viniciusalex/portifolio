@@ -1,30 +1,86 @@
+{% extends "base.html" %}
 {% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinicius Alexandre</title>
-    <link rel="stylesheet" href="{% static '/styles/styles.css' %}">
-</head>
-<body>
-    <div class='container__logo'>
-        <img src="{% static 'assets/logo/logo_nome.png' %}" alt="">
-    </div>
-    <div class="container__imagem">
-        <img src="{% static 'assets/favicon/sentado_mesa.png' %}" alt="">
-    </div>
-    <div class="container__frase_apresentacao">
-        <h1 style='color:white;'>Olá galera,<br>me chamo Vinicius e<br>eu sou um <span style="color: #044aad;">programador</span><span style="color: #044aad;"><br>Seja</span> bem vindo ao meu portifólio</h1>
-        <div class="container__botoes">
-            <button>Saber mais sobre mim</button>
-            <button>Ver meus projetos e ideias</button>
+
+<header class="cabecalho">
+    <div class="cabecalho__busca">
+        <div class="busca__fundo">
+            <form action="#">
+                <div class="busca__input-wrapper">
+                    <input class="busca__input" type="text" name="buscar" placeholder="O que você procura?">
+                    <button type="submit" class="button__buscar">
+                        <img class="busca__icone" src="{% static '/assets/icones/search.png' %}" alt="ícone de search">
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-</body>
+</header>
+<section class="tags">
+    <p class="tags__titulo">Busque por tags:</p>
+    <ul class="tags__lista">
+        <li class="tags__tag" style="background-color: #0b4da8;"><a href="#" class="btn animacao-mexer ">Python</a></li>
+        <li class="tags__tag" style="background-color: #7b7d80;"><a href="#" class="btn animacao-mexer">PHP</a></li>
+        <li class="tags__tag" style="background-color: #0b4da8;"><a href="#" class="btn animacao-mexer">Django</a></li>
+        <li class="tags__tag" style="background-color:  #7b7d80;"><a href="#" class="btn animacao-mexer">Outros</a></li>
+    </ul>
+</section>
+<section class="galeria">
+    <div class="cards">
+        <h2 class="cards__titulo">Navegue pelos trabalhos</h2>
+        <ul class="cards__lista">
+            <li class="card">
+                <a href="{% url 'conteudo' %}">
+                    <img class="card__imagem" src="{% static '/assets/conteudo/exemplo.jpg' %}" alt="foto">
+                </a>
+                <span class="card__tag">categoria</span>
+                <div class="card__info">
+                    <p class="card__titulo">nome</p>
+                    <div class="card__texto">
+                        <p class="card__descricao">legenda</p>
+                        <span>
+                            <img src="{% static '/assets/icones/favorite_outline.png'  %}" alt="ícone de coração">
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="card">
+                <a href="{% url 'conteudo' %}">
+                    <img class="card__imagem" src="{% static '/assets/conteudo/exemplo.jpg' %}" alt="foto">
+                </a>
+                <span class="card__tag">categoria</span>
+                <div class="card__info">
+                    <p class="card__titulo">nome</p>
+                    <div class="card__texto">
+                        <p class="card__descricao">legenda</p>
+                        <span>
+                            <img src="{% static '/assets/icones/favorite_outline.png'  %}" alt="ícone de coração">
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="card">
+                <a href="{% url 'conteudo' %}">
+                    <img class="card__imagem" src="{% static '/assets/conteudo/exemplo.jpg' %}" alt="foto">
+                </a>
+                <span class="card__tag">categoria</span>
+                <div class="card__info">
+                    <p class="card__titulo">nome</p>
+                    <div class="card__texto">
+                        <p class="card__descricao">legenda</p>
+                        <span>
+                            <img src="{% static '/assets/icones/favorite_outline.png'  %}" alt="ícone de coração">
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
 
 
-</html>
 
+
+
+{% endblock %}
